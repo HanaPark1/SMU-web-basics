@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+            table {
+                border-top: 3px solid #424242;
+                border-collapse: collapse;
+                border-bottom: 2px solid #424242;
+                width: 1000px;
+                margin: 50px auto;
+            }
+
+            th,
+            td {
+                border-bottom: 1px solid #e3e3e3;
+            }
+
+            th {
+                height: 48px;
+            }
+
+            td {
+                text-align: center;
+                height: 45px;
+            }
+
+            .btnGroup {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 auto;
+                width: 420px;
+
+            }
+
+            .btnGroup>div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                background-color: #efefef;
+                height: 40px;
+            }
+    </style>
+    <script>
+        function btn() {
+            var htmlData = ""
+            var hdata = "<tr><td>${i+1}</td><td>익스프레스 체크아웃 서비스 오픈</td><td>포레스트</td><td>2025-04-10</td>"
+            for (var i = 0; i < 10; i++) {
+                htmlData += `<tr><td>${i + 1}</td><td>익스프레스 체크아웃 서비스 오픈</td><td>포레스트</td><td>2025-04-10</td>`
+            }
+            document.getElementById("tbody").innerHTML = htmlData;
+            alert("출력 끝")
+        }
+        function insertBtn() {
+            var idata = `<tr><td>11</td><td>리솜 사이트 오픈</td><td>관리자</td><td>2025-04-10</td>`
+            /* $("#tbody").prepend(idata) ||| prepend, append, html*/
+            $("#tbody").append(idata);
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>리조트</th>
+                <th>등록일자</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr>
+                <td colspan="4">현재 데이터가 없습니다</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btnGroup">
+        <div onclick="btn()">
+            불러오기
+        </div>
+        <div onclick="insertBtn()">
+            추가하기
+        </div>
+    </div>
+</body>
+
+</html>
