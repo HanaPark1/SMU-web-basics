@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 뉴스</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            width: 650px;
+            height: 544px;
+            display: flex;
+            margin: 10px auto;
+            border-top : 1px solid #333;
+            border-bottom : 1px solid #333;
+            justify-content: space-between;
+        }
+
+        .sub1 > ul {
+            width: 84px;
+            height: 800px;
+            list-style: none;
+        }
+
+        .sub1 li {
+            padding: 7px 0;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+        #nav_title {
+            padding: 30px 0 10px;
+            width: 60px;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            border-bottom: 1px solid black;
+        }
+
+        .sub2 {
+            width: 584px;
+            height: 800px;
+        }
+        .sub2 > h2 {
+            width: 98px;
+            height: 19px;
+            font-size: 15px;
+            padding: 30px 0 11px 0;
+            font-weight: 700;
+            line-height: 19px;
+            letter-spacing: -0.5px;
+            
+        }
+        .news_item {
+            width: 100%;
+            height: 75px;
+            display: flex;
+            border-bottom: 1px solid #303030;
+            padding: 15px 0;
+        }
+        .news_item > img {
+            width: 110px;
+            height: 75px;
+        }
+        .news_item_content {
+            margin-left: 10px;
+        }
+        .news_item_content > a {
+            font-size: 15px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .news_item_content > p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-top : 5px;
+            font-size: 13px;
+            letter-spacing: -0.5px;
+        }
+        .news_item_content > h5 {
+            padding-top: 8px;
+            font-size: 14px;
+            color: #303030;
+        }
+    </style>
+
+</head>
+<body>
+    <section>
+        <div class="sub1">
+            <h2 id="nav_title">경제</h2>
+            <ul>
+                <li>금융</li>
+                <li>증권</li>
+                <li>산업/재계</li>
+                <li>중기/벤처</li>
+            </ul>
+        </div>
+        <div class="sub2">
+            <h2>헤드라인 뉴스</h2>
+            <div class="news_item">
+                <img src="img/ns1.jpg">
+                <div class="news_item_content">
+                    <a href=""><strong>최상목 "美 관세 유예에도 불확실 여전…시장 모니터링 강화</strong></a>
+                    <p>최상목 부총리 겸 기획재정부 장관이 11일 “미국 상호관세가 90일 유예됐지만, 불확실성은 여전</p>
+                    <h5>뉴스1</h5>
+                </div>
+            </div>
+            <div class="news_item">
+                <img src="img/ns1.jpg">
+                <div class="news_item_content">
+                    <a href=""><strong>최상목 "美 관세 유예에도 불확실 여전…시장 모니터링 강화</strong></a>
+                    <p>최상목 부총리 겸 기획재정부 장관이 11일 “미국 상호관세가 90일 유예됐지만, 불확실성은 여전</p>
+                    <h5>뉴스1</h5>
+                </div>
+            </div>
+            <div class="news_item">
+                <img src="img/ns1.jpg">
+                <div class="news_item_content">
+                    <a href=""><strong>최상목 "美 관세 유예에도 불확실 여전…시장 모니터링 강화</strong></a>
+                    <p>최상목 부총리 겸 기획재정부 장관이 11일 “미국 상호관세가 90일 유예됐지만, 불확실성은 여전</p>
+                    <h5>뉴스1</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
