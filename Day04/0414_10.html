@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-shadow: 5px 5px 10px red;
+            font-size: 50px;
+            /*글자사이여백*/
+            letter-spacing: -2px;
+            /*단어사이여백*/
+            word-spacing: 5px;
+        }
+        h3 {
+            text-shadow: -7px -7px 5px ;
+            font-size: 50px;
+            letter-spacing: -1px;
+        }
+        div {
+            width: 300px;
+            height: 20px;
+            border: 1px solid black;
+            /* wrap > 텍스트 밑으로 떨어짐, nowrap > 가로로 계속 이어짐*/
+            white-space: nowrap;
+            /*hidden > 보이지 않는 부분 잘림*/
+            overflow: hidden;
+            /*넘치면 ... 표시*/
+            text-overflow: ellipsis;
+        }
+        div:hover {
+            overflow: visible;
+            white-space: wrap;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h2>회원가입 진행상황</h2>
+    <h3>회원가입</h3>
+    <div>bounce back it's my time
+
+        날 담아내기엔 모자란 display ha
+        
+        shine on me now
+        
+        망설이다간 다 놓쳐버릴 기회
+        
+        don't be afraid of me
+        
+        내가 나타나면 모두가 도망가
+        
+        블링블링한 외관에
+        
+        but you better watch out
+        
+        if you wanna face off
+        
+        move back 미리,
+        
+        잔챙이끼린
+        
+        구경해</div>
+</body>
+</html>
