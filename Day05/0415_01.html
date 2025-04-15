@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+        #main {
+            margin: 0 auto;
+            width: 1000px;
+            border: 1px solid black;
+        }
+        ul {
+            display: flex;
+            height: 100px;
+            /*주축방향 정렬 - flex-start, flex-end, center, space-between,*/
+            justify-content: space-between;
+            /*교차축방향 정렬*/
+            align-items: center;
+
+            /*flex-direction: row-reverse;  */
+        }
+        li {
+            width: 170px;
+            height: 40px;
+            border: 1px solid black;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h2>메뉴</h2>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
