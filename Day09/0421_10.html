@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+        table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table {
+            margin: 0 auto;
+
+        }
+        th,td {
+            width: 150px;
+            height: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>산술연산</h2>
+    <script>
+        function dataBtn() {
+            var hdata = "";
+            for (let i=0; i<100; i++) {
+                hdata += "<tr>";
+                hdata += "<td>1</td>";
+                hdata += "<td>안녕</td>";
+                hdata += "<td>하나</td>";
+                hdata += "<td>25.04.21</td>";
+                hdata += "</tr>";
+            }
+            console.log(document.querySelector("#tbody").innerHTML = hdata);
+    
+            
+        }
+
+        /*
+        let num1 =  15;
+        let num2 = 2;
+        let num3 = 0;
+        result = 15+2;
+        result = num1+num2;
+        document.writeln(result, "<br>");
+        result = num1-num2;
+        document.writeln(result, "<br>");
+        result = num1*num2;
+        document.writeln(result, "<br>");
+        result = num1/num2;
+        document.writeln(result, "<br>");
+
+        let a = 10;
+        let b = "10";
+
+        result = a==b;
+        document.writeln(result,"<br>");
+
+        result2 = a===b;
+        document.writeln(result2,"<br>");
+
+        result = a+b;
+        document.writeln(result,"<br>");
+        // document.writeln(a-b,"<br>"); NaN
+        */
+
+    </script>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr>
+                <td>1</td>
+                <td>안녕</td>
+                <td>하나</td>
+                <td>25.04.21</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="dataBtn()">버튼</button>
+</body>
+</html>
