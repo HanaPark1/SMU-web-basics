@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+
+    <script>
+        function calBtn() {
+            alert("계산하기 실행");
+            let height = document.querySelector("#height").value;
+            let weight = document.querySelector("#weight").value;
+            console.log("글자:" , document.querySelector("#bmi").innerText="결과");
+            let bmi = (weight / (height * height))*10000;
+            document.querySelector("#result").innerText = bmi;
+            if (bmi >= 30) {
+                document.querySelector("#result2").innerText = "고도비만";
+            }else if (bmi >= 25) {
+                document.querySelector("#result2").innerText = "비만";
+            }else if (bmi >= 23) {
+                document.querySelector("#result2").innerText = "과체중";
+            }else if (bmi >= 18.5) {
+                document.querySelector("#result2").innerText = "정상";
+            }else {
+                document.querySelector("#result2").innerText = "저체중";
+            }
+        }
+        /* 체중, 키(cm) 입력받아, 체중(kg) / (신장(m) x 신장 (m) 결과값을 출력하시오
+        입력 2개 - 체중, 키
+        키를 cm -> m 변경
+        계산수식을 이용해서 결과값을 출력하시오.
+        */
+
+        /*let weight = Number(prompt("체중을 입력하세요: "));
+        let height = Number(prompt("신장을 입력하세요(cm)"));
+        let height_m = length_cm / 100;
+        let bmi = (weight / (height * height))*10000;
+        document.writeln("체중: ", weight);
+        document.writeln("신장: ", height_m);
+        document.writeln("bmi: ", bmi);
+        */
+
+        /*
+        // 국어,영어,수학 점수를 입력받아 값을 출력하시오
+        let kor = prompt("국어 점수를 입력하세요");
+        let eng = prompt("영어 점수를 입력하세요");
+        let math = prompt("수학 점수를 입력하세요");
+        document.writeln("국어 점수: ",kor);
+        document.writeln("영어 점수: ",eng);
+        document.writeln("수학 점수: ",math);
+        console.log(typeof(kor));
+        let total = Number(kor)+Number(eng)+Number(math);
+        let avg = total/3;
+        document.writeln("총점: ",total);
+        document.writeln("평균: ",avg);
+        */
+    </script>
+</head>
+<body>
+    <h2 id="bmi">BMI 계산하기</h2>
+    <label>신장</label>
+    <input type="text" name="height" id="height">
+    <label>cm</label>
+    <br>
+    <label>체중</label>
+    <input type="text" name="weight" id="weight">
+    <label>kg</label>
+    <br>
+    <button onclick="calBtn()">계산하기</button>
+    <div id="result">0</div>
+    <div id="result2">정상</div>
+</body>
+</html>
