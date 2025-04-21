@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js"></script>
+    <title>Document</title>
+    <script>
+        function chBtn() {
+            alert("색상을 변경합니다.");
+            // id 찾는 방법
+            // let color1 = document.getElementById("color1"); 
+            // color1.style.color = "red";
+            // color1.innerText = "회원수정";
+
+            /*
+            let color2 = document.getElementsByClassName("color2");
+            console.log(color2); // h2.color2
+            color2[0].style.color = "red";
+            color2[0].innerText = "회원수정";
+            */
+
+            /*
+            // querySelector - id, class
+            let color3 = document.querySelector("color3");
+            console.log(color3);
+            console.log(color3[0]); // 배열 아님
+            color3.style.color = "red";
+            color3.innerText = "회원수정";
+            */
+
+            // querySelector - 1개만 검색
+            // querySelectorAll() - class 복수개 검색
+
+
+            let color4 = document.querySelector(".color4");
+            console.log(color4); // h2.color2
+            color4.style.color = "red";
+            color4.innerText = "회원수정";
+        }
+
+    </script>
+
+</head>
+<body>
+    <h2 id="color1">회원가입</h2>
+    <br>
+    <h2 class="color2">회원가입</h2>
+    <br>
+    <h2 id="color3">회원가입</h2>
+    <br>
+    <h2 class="color4">회원가입</h2>
+    <button onclick="chBtn()">색상변경</button>
+</body>
+</html>
