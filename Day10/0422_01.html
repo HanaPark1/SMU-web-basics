@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            line-height: 39px;
+        }
+    </style>
+    <script>
+        function calBtn() {
+            let kor = Number(document.querySelector("#kor").value);
+            let eng = Number(document.querySelector("#eng").value);
+            document.querySelector("#cal").innerText = kor + eng;
+        }
+    </script>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <label for="kor">국어 점수</label>
+    <input type="text" name="kor" id="kor"><br>
+    <label for="eng" >영어 점수</label>
+    <input type="text" name="eng" id="eng"><br>
+    <button type="button" onclick="calBtn()">저장</button>
+    <h3>합계</h3>
+    <div id="cal">0</div>
+</body>
+</html>
