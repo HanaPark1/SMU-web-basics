@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #s_container {
+            display: flex;
+        }
+
+        #s_container>div {
+            width: 200px;
+            height: 50px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+</body>
+<h2>랜덤 숫자 정답</h2>
+<div id="s_container">
+    <div>정답</div>
+    <div id="result">0</div>
+</div>
+<h2>입력 숫자</h2>
+<table>
+    <tr>
+        <th>번호</th>
+        <th>입력값</th>
+    </tr>
+    <tbody id="tbody">
+    </tbody>
+</table>
+<script>
+    // 1~10 랜덤 숫자 6개를 출력, 중복된 숫자가 없도록 6개 출력
+    // arr[] = 6개 출력
+    let arr = [];
+    let input;
+
+while (arr.length < 5) {
+    let ranNum = parseInt(10 * Math.random() + 1);
+    console.log(ranNum);
+
+    if (arr.length !== 0) {
+        console.log("배열이 비어있지 않습니다!");
+        console.log("ranNum:", ranNum);
+        console.log("arr:", arr);
+
+        if (arr.includes(ranNum)) {
+            console.log("중복! push 안 함");
+            continue;
+        } else {
+            console.log("중복 아님! push 함");
+            arr.push(ranNum);
+        }
+    } else {
+        console.log("배열이 비어서 넣습니닷");
+        arr.push(ranNum);
+    }
+    console.log(arr);
+}
+
+
+    let txt = "";
+    for(i=0; i<arr.length; i++){
+        console.log(i);
+        console.log(arr[i]);
+        txt += `<tr>`;
+        txt += `<td>${i+1}</td>`
+        txt += `<td>${arr[i]}</td>`
+        txt += `</tr>`;
+    }
+    document.querySelector("#tbody").innerHTML = txt;
+</script>
+
+</html>
