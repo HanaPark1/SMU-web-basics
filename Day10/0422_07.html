@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*for(i=0; i<100; i++) {
+
+        }*/
+
+        /*do {
+            i = prompt("프로그램을 종료(0: 실행, 1:취소) : ");
+        } while(i == 0){
+            
+        }*/
+    </script>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        table,th,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table {
+            margin: 0 auto;
+        }
+        th,td {
+            width: 200px;
+            height: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>게시판</h2>
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일</th>
+        </tr>
+        <tbody id="tbody">
+        </tbody>
+        <script>
+            let data = "";
+            for (i=0; i<10; i++) {
+                data += `<tr><td>${i+1}</td><td>이벤트 신청</td><td>관리자</td><td>2025-04-22</td></tr>`;
+            }
+            document.querySelector("#tbody").innerHTML = data;
+        </script>
+    </table>
+</body>
+</html>

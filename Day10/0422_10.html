@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        /*
+        for (let i=1; i<=10; i++){
+            if (i % 2 == 0){
+                document.write(i,"<br>");
+            }
+        }
+        
+        // 삼항식을 이용해서 최대값을 출력하세요
+        let a = 30;
+        let b = 50;
+        let c = 20;
+        
+        let result = a>b ? (a>c ? a:c) : (b>c ? b:c);
+        document.writeln(result);
+        
+        //max 함수 사용
+        let result2 = Math.max(a,b,c);
+        document.writeln(result2);
+        
+        // 소수점 round(), ceil(), floor()
+        // 소수점 3자리에서 반올림을 하시오  1.579 * 100/100
+        document.writeln(Math.round((1.579*100))/100, "<br>");
+        
+        // 소수점 2자리에서 반올림을 하시오 18.79
+        document.writeln(Math.round((18.79*10))/10, "<br>");
+
+        //Math.random() 0~1 사이 소수점
+        // 정수형 1~10
+        document.writeln(parseInt(10*Math.random())+1,"<br>");
+        // 정수형 1~45
+        document.writeln(parseInt(45*Math.random())+1,"<br>");
+        // 정수형 0~9까지 랜덤숫자 
+        document.writeln(parseInt(10*Math.random()),"<br>");
+
+        // 랜덤 숫자 1-10까지 숫자 3개를 출력하시오.
+        document.writeln(parseInt(10*Math.random()),"<br>");
+        document.writeln(parseInt(10*Math.random()),"<br>");
+        document.writeln(parseInt(10*Math.random()),"<br>");
+        */
+
+        let ran1 = parseInt(10*Math.random())+1;
+        let input = prompt("숫자를 입력하세요. >>");
+
+        // 입력값이 크면 크다. 작으면 작다. 맞으면 정답
+        if (ran1 > input) {
+            document.write("작다");
+        }else if (ran1 < input) {
+            document.write("크다");
+        }else {
+            document.write("같다");
+        }
+        
+    </script>
+</body>
+</html>
