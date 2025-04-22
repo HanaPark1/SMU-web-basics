@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #s_container {
+            display: flex;
+        }
+
+        #s_container>div {
+            width: 200px;
+            height: 50px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+</body>
+<h2>랜덤 숫자 정답</h2>
+<div id="s_container">
+    <div>정답</div>
+    <div id="result">0</div>
+</div>
+<h2>입력 숫자</h2>
+<table>
+    <tr>
+        <th>번호</th>
+        <th>입력값</th>
+    </tr>
+    <tbody id="tbody">
+    </tbody>
+</table>
+<script>
+    let arr = [];
+    ranNum = parseInt(10*Math.random()+1);
+    let input;
+
+    for(i=1; i<=5; i++){
+        input = Number(prompt("1~10 사이의 랜덤 숫자를 입력하세요. "));
+        arr.push(input);
+    }
+    document.querySelector("#result").innerText = ranNum;
+    console.log(arr);
+    let txt = "";
+    for(i=0; i<=arr.length; i++){
+        txt += `<tr>`;
+        txt += `<td>${i+1}</td>`
+        txt += `<td>${arr[i]}</td>`
+        txt += `</tr>`;
+    }
+    document.querySelector("#tbody").innerHTML = txt;
+
+</script>
+
+</html>
