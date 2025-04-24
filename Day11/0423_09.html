@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            $("h2").click(function(){
+                console.log($("h2").parents());
+                console.log($("h2").prev());
+                console.log($("h2").closest("span"));
+                console.log($("h2").siblings());
+                // h2 클릭 시 이전요소 빨간색 글자로 변경
+                $("h2").prev().css("color", "red");
+                $("h2").next().css("color", "blue");
+            });
+
+            $("p").click(function(){
+                $(this).css("color", "red");
+            })
+        })
+
+    </script>
+    <span>bbb</span>
+    <div id="wrap">
+        <span id="span">bb</span>
+        <div id="inner_wrap">
+            <h1>제목1</h1>
+            <h2>제목1</h2>
+            <p>제목1</p>
+            <p>제목1</p>
+            <p>제목1</p>
+            <p>제목1</p>
+        </div>
+    </div>
+</body>
+</html>

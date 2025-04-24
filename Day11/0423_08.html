@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script>
+        $(document).ready(function(){
+
+        });
+        // 제이쿼리 선언문
+        $(function(){
+            $("#cBtn").click(function(){
+                let kor = Number($("#kor").val()); // input 값 불러옴
+                let eng = Number($(".eng").val());
+                $("#d01").text(kor+eng);
+            })
+
+            
+            let kor = Number($("#kor").val()); // input 값 불러옴
+            let eng = Number($(".eng").val());
+            $("#d01").text(kor+eng);
+        })
+
+        $("#chgImg").click(function(){
+            $("#img").attr('src', 'img/best2.jpg');
+        })
+
+        $(function() {
+            let num=1;
+            $("#pre").click(function(){
+                num --;
+                if (num < 1) {
+                    alert("이미지 없음");
+                }else {
+                    $("#img").attr("src",  `img/moka${num}.jpeg`);
+                }
+            });
+            $("#next").click(function(){
+                num ++;
+                if (num > 4) {
+                    alert("이미지 없음");
+                }else {
+                    $("#img").attr("src",  `img/moka${num}.jpeg`);
+                }
+            });
+        })
+
+    </script>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img id="img" src="img/moka1.jpeg"/>
+    <button id="pre"><i class="fa-regular fa-hand-point-left"></i></button>
+    <button id="next"><i class="fa-regular fa-hand-point-right"></i></button>
+</body>
+</html>
