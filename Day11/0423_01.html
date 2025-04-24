@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 선언 - 배열:리스트
+        let arr = new Array();
+        let arr1 = [1,2,3];
+        arr.push(4); // 추가 - 맨뒤
+        arr.unshift(10); // 추가 - 맨앞
+        arr.splice(2,0,20); // 추가 - 원하는 위치
+
+        arr.pop(); //삭제 - 맨뒤
+        arr.shift(); //삭제 - 맨앞
+        arr.splice(1,2); // 삭제 - 원하는 위치
+
+        arr.sort((a,b)=>a-b); //순차정렬, (b-a) 역순
+
+    </script>
+</body>
+</html>
