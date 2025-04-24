@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+    <style>
+        li {
+            font-size: 30px;
+            border-radius: 5px;
+            color: red;
+        }
+        img {
+            width: 200px;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("#cbtn").click(function() {
+                let hdata = "";
+                hdata += `<ul>`;
+                hdata += `<li>스위스</li>`;
+                hdata += `<li>이탈리아</li>`;
+                hdata += `<li>프랑스</li>`;
+                hdata += `</ul>`;
+
+                $(".txt").prepend(hdata); // append
+            })
+            $("#chg").click(function(){
+                $("li").css({"font-size": "30px", "color":"blue", "border" : "1px solid black"});
+            })
+
+            $("li").click(function() {
+                console.log($(this).text());
+            })
+            $("img").click(function() {
+                console.log($(this).attr("src"));
+                $(this).removeAttr("alt")
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="txt">
+        <ul>
+            <li>스위스</li>
+            <li>이탈리아</li>
+            <li>프랑스</li>
+        </ul>
+    </div>
+    <img src="/Day11/img/moka1.jpeg" alt="모카">
+    <button id="cbtn">추가</button>
+    <button id="chg">변경</button>
+</body>
+</html>
